@@ -1,1 +1,1 @@
-# Script de tradução em python para .txt com regex101
+# Script de tradução em python para .txt com regex
