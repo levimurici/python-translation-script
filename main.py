@@ -4,8 +4,8 @@ import re
 translator = Translator(service_urls=['translate.googleapis.com'])
 translator = Translator()
 
-file = "/home/levi/dev-ops/python-translation/quest-test.txt"
-file1 = "/home/levi/dev-ops/python-translation/quest-test-translated.txt"
+file = "/home/wesley/Documentos/Projetos/python-translation-script/quest-test.txt"
+file1 = "/home/wesley/Documentos/Projetos/python-translation-script/quest-test-translated.txt"
 # file1 = file+".copy"
 
 with open(file, "r") as f:

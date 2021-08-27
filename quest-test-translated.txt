@@ -3,11 +3,11 @@ quest cufar_ucenic70 begin
  
         when 50194.use begin
   
-   say_title("Cufr Maestru II:")
-   say_reward("V rugm s selectai opiunea dorit!")
+   say_title("Cufr Master II:")
+   say_reward("Please select the desired option!")
    say("")
    
-   local s = select("Deschide Cufr.", "nchide.")
+   local s = select("Open Cofr.", "Close.")
    
    if s == 1 then 
    
@@ -15,8 +15,8 @@ quest cufar_ucenic70 begin
     
      if pc.get_empty_inventory_count() <= 5 then
      
-      say_title("Cufr Maestru II:")
-      say("Inventarul este plin.")
+      say_title("Cufr Master II:")
+      say("The inventory is full.")
       say("")
       return
     
@@ -24,8 +24,8 @@ quest cufar_ucenic70 begin
      
       if pc.count_item(50187) >=1 or pc.count_item(50188) >=1 or pc.count_item(50189) >=1 or pc.count_item(50190) >=1 or pc.count_item(50191) >=1 or pc.count_item(50192) >=1 or pc.count_item(50193) >=1 or pc.count_item(50195) >=1 or pc.count_item(50196) >=1 then
       
-       say_title("Cufr Maestru II:")
-       say("Deja ai n inventar:")
+       say_title("Cufr Master II:")
+       say("Already in inventory:")
        say_item_vnum(50195)
        say("")
        return
@@ -36,8 +36,8 @@ quest cufar_ucenic70 begin
        
       end
       
-      say_title("Cufr Maestru II:")
-      say_reward("Mult noroc i distracie placut.")
+      say_title("Cufr Master II:")
+      say_reward("Good luck and have fun.")
       say("")
      
       pc.removeitem("50194", 1) -- Sterge Cufarul --
@@ -52,8 +52,8 @@ quest cufar_ucenic70 begin
      
     else
     
-     say_title("Cufr Maestru II:")
-     say("Nu ai nivelul necesar pentru aceast aciune.")
+     say_title("Cufr Master II:")
+     say("You do not have the level required for this action.")
      say("")
      return
      
