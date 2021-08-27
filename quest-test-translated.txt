@@ -1,0 +1,71 @@
+quest cufar_ucenic70 begin
+    state start begin
+ 
+        when 50194.use begin
+  
+   say_title("Cufr Maestru II:")
+   say_reward("V rugm s selectai opiunea dorit!")
+   say("")
+   
+   local s = select("Deschide Cufr.", "nchide.")
+   
+   if s == 1 then 
+   
+    if pc.get_level()>= 70 then
+    
+     if pc.get_empty_inventory_count() <= 5 then
+     
+      say_title("Cufr Maestru II:")
+      say("Inventarul este plin.")
+      say("")
+      return
+    
+     else 
+     
+      if pc.count_item(50187) >=1 or pc.count_item(50188) >=1 or pc.count_item(50189) >=1 or pc.count_item(50190) >=1 or pc.count_item(50191) >=1 or pc.count_item(50192) >=1 or pc.count_item(50193) >=1 or pc.count_item(50195) >=1 or pc.count_item(50196) >=1 then
+      
+       say_title("Cufr Maestru II:")
+       say("Deja ai n inventar:")
+       say_item_vnum(50195)
+       say("")
+       return
+       
+      else
+      
+       pc.give_item2(50195, 1) -- Cufr Maestru II 9 --
+       
+      end
+      
+      say_title("Cufr Maestru II:")
+      say_reward("Mult noroc i distracie placut.")
+      say("")
+     
+      pc.removeitem("50194", 1) -- Sterge Cufarul --
+      
+      pc.give_item2(71085, 8) -- Licoare Roie --
+      pc.give_item2(71084, 8) -- Licoare Albastr --
+      pc.give_item2(71001, 5) -- Licoare Violet --
+      pc.give_item2(71094, 5) -- Licoare Verde -- 
+	  pc.give_item2(71153, 2)
+      
+     end
+     
+    else
+    
+     say_title("Cufr Maestru II:")
+     say("Nu ai nivelul necesar pentru aceast aciune.")
+     say("")
+     return
+     
+    end
+    
+   elseif s == 2 then
+    
+    return
+    
+   end
+   
+  end
+    
+ end
+end
