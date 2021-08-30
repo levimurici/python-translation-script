@@ -4,10 +4,10 @@ quest cufar_ucenic70 begin
         when 50194.use begin
   
    say_title("Cufr Master II:")
-   say_reward("Please select the desired option!")
+   say_reward("Por favor, selecione a opção desejada!")
    say("")
    
-   local s = select("Open Cofr.", "Close.")
+   local s = select("Abra o CUFR.", "Fechar".)
    
    if s == 1 then 
    
@@ -16,7 +16,7 @@ quest cufar_ucenic70 begin
      if pc.get_empty_inventory_count() <= 5 then
      
       say_title("Cufr Master II:")
-      say("The inventory is full.")
+      say("O inventário está cheio".)
       say("")
       return
     
@@ -25,7 +25,7 @@ quest cufar_ucenic70 begin
       if pc.count_item(50187) >=1 or pc.count_item(50188) >=1 or pc.count_item(50189) >=1 or pc.count_item(50190) >=1 or pc.count_item(50191) >=1 or pc.count_item(50192) >=1 or pc.count_item(50193) >=1 or pc.count_item(50195) >=1 or pc.count_item(50196) >=1 then
       
        say_title("Cufr Master II:")
-       say("Already in inventory:")
+       say("Você já tem no inventário:")
        say_item_vnum(50195)
        say("")
        return
@@ -37,7 +37,7 @@ quest cufar_ucenic70 begin
       end
       
       say_title("Cufr Master II:")
-      say_reward("Good luck and have fun.")
+      say_reward("Boa sorte e distração agradável".)
       say("")
      
       pc.removeitem("50194", 1) -- Sterge Cufarul --
@@ -53,7 +53,7 @@ quest cufar_ucenic70 begin
     else
     
      say_title("Cufr Master II:")
-     say("You do not have the level required for this action.")
+     say("Não tem o nível necessário para esta ação.")
      say("")
      return
      
